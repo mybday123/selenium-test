@@ -36,7 +36,7 @@ def test_login_success():
 
     assert(driver.current_url == SECURE_URL)
     loginSuccessBanner = driver.find_element(By.CLASS_NAME, 'success')
-    assert(loginSuccessBanner.is_displayed)
+    assert(loginSuccessBanner.is_displayed())
     driver.quit()
 
 def test_login_fail():
@@ -54,5 +54,5 @@ def test_login_fail():
 
     assert(driver.current_url == LOGIN_URL)
     loginFailedBanner = driver.find_element(By.CLASS_NAME, 'error')
-    assert(loginFailedBanner.is_displayed)
+    assert(loginFailedBanner.is_displayed())
     driver.quit()
